@@ -1,0 +1,687 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: MoadBus
+  description: 'TODO: Add Description'
+  contact: {}
+host: core1.moadbusglobal.com
+basePath: /pp
+securityDefinitions:
+  apikey:
+    type: apiKey
+    description: ''
+    name: apikey
+    in: header
+schemes:
+- https
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /SignOn:
+    post:
+      description: Login and receive an authorization token
+      summary: Login
+      tags:
+      - Misc
+      operationId: SignOnPost
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: hUsername
+        in: header
+        required: true
+        type: string
+        description: User Name
+      - name: hTime
+        in: header
+        required: true
+        type: string
+        description: Timestamp
+      - name: hHash
+        in: header
+        required: true
+        type: string
+        description: Hashcode SHA256(husername+hTime,key)
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/LoginRequest'
+      responses:
+        200:
+          description: ''
+          headers: {}
+        503:
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/Login'
+          examples:
+            application/json:
+              ResponseCode: 00
+              ResponsText: Success
+              Token: ea039ae5e9ce74b9d597775d9e2d6b7fa8caf10663305867250df7d91f61ef
+              ExecutionTimeStamp: 2019-09-04T10:34:05.339
+  /PayFromAccountReversal:
+    post:
+      description: Login and receive an authorization token
+      summary: PayFromAccountReversal
+      tags:
+      - Misc
+      operationId: PayFromAccountReversalPost
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: hUsername
+        in: header
+        required: true
+        type: string
+        description: User Name
+      - name: hTime
+        in: header
+        required: true
+        type: string
+        description: Timestamp
+      - name: hHash
+        in: header
+        required: true
+        type: string
+        description: Hashcode SHA256(husername+hTime,key)
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/PayFromAccountReversalRequest'
+      responses:
+        200:
+          description: ''
+          schema:
+            $ref: '#/definitions/PayFromAccountReversal'
+          examples:
+            application/json:
+              ResponseCode: 00
+              ResponseText: Success
+              ExecutionTimeStamp: 2019-09-04T10:34:18.573
+              TransRefNumber: DMS3243234
+          headers: {}
+        503:
+          description: Service Unavailable
+          schema:
+            $ref: '#/definitions/Login'
+          examples:
+            application/json:
+              ResponseCode: 00
+              ResponsText: Success
+              Token: ea039ae5e9ce74b9d597775d9e2d6b7fa8caf10663305867250df7d91f61ef
+              ExecutionTimeStamp: 2019-09-04T10:34:05.339
+  /PayFromAccountrequest:
+    post:
+      description: Login and receive an authorization token
+      summary: PayfromAccount
+      tags:
+      - Misc
+      operationId: PayFromAccountrequestPost
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: hUsername
+        in: header
+        required: true
+        type: string
+        description: User Name
+      - name: hTime
+        in: header
+        required: true
+        type: string
+        description: Timestamp
+      - name: hHash
+        in: header
+        required: true
+        type: string
+        description: Hashcode SHA256(husername+hTime,key)
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/PayfromAccountRequest'
+      responses:
+        200:
+          description: ''
+          schema:
+            $ref: '#/definitions/PayfromAccount'
+          examples:
+            application/json:
+              ResponseCode: 00
+              ResponseText: Success
+              ExecutionTimeStamp: 2019-09-04T10:32:57.349
+              TransRefNumber: DMS3243232
+          headers: {}
+  /AccountBalance:
+    post:
+      description: Login and receive an authorization token
+      summary: AccountBalance
+      tags:
+      - Misc
+      operationId: AccountBalancePost
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: hUsername
+        in: header
+        required: true
+        type: string
+        description: User Name
+      - name: hTime
+        in: header
+        required: true
+        type: string
+        description: Timestamp
+      - name: hHash
+        in: header
+        required: true
+        type: string
+        description: Hashcode SHA256(husername+hTime,key)
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/AccountBalanceRequest'
+      responses:
+        200:
+          description: ''
+          schema:
+            $ref: '#/definitions/AccountBalance'
+          examples:
+            application/json:
+              ResponseCode: 00
+              ResponseText: Sufficient Balance
+              ExecutionTimeStamp: 2019-09-03T08:36:37.051
+          headers: {}
+  /SignOff:
+    post:
+      description: Login and receive an authorization token
+      summary: Logout
+      tags:
+      - Misc
+      operationId: SignOffPost
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: hUsername
+        in: header
+        required: true
+        type: string
+        description: User Name
+      - name: hTime
+        in: header
+        required: true
+        type: string
+        description: Timestamp
+      - name: hHash
+        in: header
+        required: true
+        type: string
+        description: Hashcode SHA256(husername+hTime,key)
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/LogoutRequest'
+      responses:
+        200:
+          description: ''
+          schema:
+            $ref: '#/definitions/Logout'
+          examples:
+            application/json:
+              ResponseCode: 00
+              ResponseText: Success
+              Token: 08d27ac9245213e320ff6e3e66e3ae172914680cd4d5c3a150edb7defdbb121b
+              ExecutionTimeStamp: 2019-09-03T08:36:37.051
+          headers: {}
+  /AccountList:
+    post:
+      description: Login and receive an authorization token
+      summary: AccountList
+      tags:
+      - Misc
+      operationId: AccountListPost
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Content-Type
+        in: header
+        required: true
+        type: string
+        description: ''
+      - name: hUsername
+        in: header
+        required: true
+        type: string
+        description: User Name
+      - name: hTime
+        in: header
+        required: true
+        type: string
+        description: Timestamp
+      - name: hHash
+        in: header
+        required: true
+        type: string
+        description: Hashcode SHA256(husername+hTime,key)
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/AccountListRequest'
+      responses:
+        200:
+          description: ''
+          schema:
+            $ref: '#/definitions/AccountList'
+          examples:
+            application/json:
+              ResponseCode: 00
+              ResponseText: Success
+              accounts:
+              - accountid: 241935
+                Description: EMPLOYEE CHECKING
+                AccountTypeId: 2
+              - accountid: 967281
+                Description: CNB SAVINGS
+                AccountTypeId: 4
+              - accountid: 8205999
+                Description: CNB SAVINGS
+                AccountTypeId: 4
+              - accountid: 8513590
+                Description: CNB SAVINGS
+                AccountTypeId: 4
+              - accountid: 8603615
+                Description: CNB SAVINGS
+                AccountTypeId: 4
+              - accountid: 8651317
+                Description: CNB SAVINGS
+                AccountTypeId: 4
+              - accountid: 10279315
+                Description: MPOWERED CHECKING
+                AccountTypeId: 2
+              ExecutionTimeStamp: 2019-09-05T12:19:33.961
+          headers: {}
+definitions:
+  LoginRequest:
+    title: LoginRequest
+    example:
+      username: allied
+      password: ba666ec1de8f28afa47f21a93d6983c902f3c813a0efcd039904f4b15f4beced
+    type: object
+    properties:
+      username:
+        type: string
+      password:
+        type: string
+    required:
+    - username
+    - password
+  Login:
+    title: Login
+    example:
+      ResponseCode: 00
+      ResponsText: Success
+      Token: ea039ae5e9ce74b9d597775d9e2d6b7fa8caf10663305867250df7d91f61ef
+      ExecutionTimeStamp: 2019-09-04T10:34:05.339
+    type: object
+    properties:
+      ResponseCode:
+        type: string
+      ResponsText:
+        type: string
+      Token:
+        type: string
+      ExecutionTimeStamp:
+        type: string
+    required:
+    - ResponseCode
+    - ResponsText
+    - Token
+    - ExecutionTimeStamp
+  PayFromAccountReversalRequest:
+    title: PayFromAccountReversalRequest
+    example:
+      token: b748f6e9afad6f3af3177cee9fc5366ca51d44da4f46e0bfdefee95c48a6e275193ffc3096dfdefd5dbe76a4e257bbbc35fe312a10f1b63a83cfeca349a7f403
+      customerId: 83d4af3e-50bf-440f-9ea7-c1d0c720f49e
+      customerName: PPMB_CBAIZE_584312
+      accountNumber: 241935
+      accountTypeId: 2
+      amount: 12.5
+      billerName: ATT
+      billerAccountNo: 10114090
+      billDescription: Cell phone bill payment
+      TransRefNumber: DMS3243234
+      OriginalTransRefNumber: DMS3243232
+    type: object
+    properties:
+      token:
+        type: string
+      customerId:
+        type: string
+      customerName:
+        type: string
+      accountNumber:
+        type: string
+      accountTypeId:
+        type: string
+      amount:
+        type: string
+      billerName:
+        type: string
+      billerAccountNo:
+        type: string
+      billDescription:
+        type: string
+      TransRefNumber:
+        type: string
+      OriginalTransRefNumber:
+        type: string
+    required:
+    - token
+    - customerId
+    - customerName
+    - accountNumber
+    - accountTypeId
+    - amount
+    - billerName
+    - billerAccountNo
+    - billDescription
+    - TransRefNumber
+    - OriginalTransRefNumber
+  PayFromAccountReversal:
+    title: PayFromAccountReversal
+    example:
+      ResponseCode: 00
+      ResponseText: Success
+      ExecutionTimeStamp: 2019-09-04T10:34:18.573
+      TransRefNumber: DMS3243234
+    type: object
+    properties:
+      ResponseCode:
+        type: string
+      ResponseText:
+        type: string
+      ExecutionTimeStamp:
+        type: string
+      TransRefNumber:
+        type: string
+    required:
+    - ResponseCode
+    - ResponseText
+    - ExecutionTimeStamp
+    - TransRefNumber
+  PayfromAccountRequest:
+    title: PayfromAccountRequest
+    example:
+      token: b748f6e9afad6f3af3177cee9fc5366ca51d44da4f46e0bfdefee95c48a6e275193ffc3096dfdefd5dbe76a4e257bbbc35fe312a10f1b63a83cfeca349a7f403
+      customerId: 83d4af3e-50bf-440f-9ea7-c1d0c720f49e
+      customerName: PPMB_CBAIZE_584312
+      accountNumber: 241935
+      accountTypeId: 2
+      amount: 12.5
+      billerName: ATT
+      billerAccountNo: 10114090
+      billDescription: Cell phone bill payment
+      TransRefNumber: DMS3243232
+    type: object
+    properties:
+      token:
+        type: string
+      customerId:
+        type: string
+      customerName:
+        type: string
+      accountNumber:
+        type: string
+      accountTypeId:
+        type: string
+      amount:
+        type: string
+      billerName:
+        type: string
+      billerAccountNo:
+        type: string
+      billDescription:
+        type: string
+      TransRefNumber:
+        type: string
+    required:
+    - token
+    - customerId
+    - customerName
+    - accountNumber
+    - accountTypeId
+    - amount
+    - billerName
+    - billerAccountNo
+    - billDescription
+    - TransRefNumber
+  PayfromAccount:
+    title: PayfromAccount
+    example:
+      ResponseCode: 00
+      ResponseText: Success
+      ExecutionTimeStamp: 2019-09-04T10:32:57.349
+      TransRefNumber: DMS3243232
+    type: object
+    properties:
+      ResponseCode:
+        type: string
+      ResponseText:
+        type: string
+      ExecutionTimeStamp:
+        type: string
+      TransRefNumber:
+        type: string
+    required:
+    - ResponseCode
+    - ResponseText
+    - ExecutionTimeStamp
+    - TransRefNumber
+  AccountBalanceRequest:
+    title: AccountBalanceRequest
+    example:
+      token: 396ef7c090a8b1c98d8b568e47460456bb231e0e6eb98d8574a7b1800f1281f6
+      customerId: 83d4af3e-50bf-440f-9ea7-c1d0c720f49e
+      customerName: PPMB_CBAIZE_584312
+      BankAccountNo: 241935
+      Amount: 15000
+    type: object
+    properties:
+      token:
+        type: string
+      customerId:
+        type: string
+      customerName:
+        type: string
+      BankAccountNo:
+        type: string
+      Amount:
+        type: string
+    required:
+    - token
+    - customerId
+    - customerName
+    - BankAccountNo
+    - Amount
+  AccountBalance:
+    title: AccountBalance
+    example:
+      ResponseCode: 00
+      ResponseText: Sufficient Balance
+      ExecutionTimeStamp: 2019-09-03T08:36:37.051
+    type: object
+    properties:
+      ResponseCode:
+        type: string
+      ResponseText:
+        type: string
+      ExecutionTimeStamp:
+        type: string
+    required:
+    - ResponseCode
+    - ResponseText
+    - ExecutionTimeStamp
+  LogoutRequest:
+    title: LogoutRequest
+    example:
+      token: b748f6e9afad6f3af3177cee9fc5366ca51d44da4f46e0bfdefee95c48a6e275193ffc3096dfdefd5dbe76a4e257bbbc35fe312a10f1b63a83cfeca349a7f403
+    type: object
+    properties:
+      token:
+        type: string
+    required:
+    - token
+  Logout:
+    title: Logout
+    example:
+      ResponseCode: 00
+      ResponseText: Success
+      Token: 08d27ac9245213e320ff6e3e66e3ae172914680cd4d5c3a150edb7defdbb121b
+      ExecutionTimeStamp: 2019-09-03T08:36:37.051
+    type: object
+    properties:
+      ResponseCode:
+        type: string
+      ResponseText:
+        type: string
+      Token:
+        type: string
+      ExecutionTimeStamp:
+        type: string
+    required:
+    - ResponseCode
+    - ResponseText
+    - Token
+    - ExecutionTimeStamp
+  AccountListRequest:
+    title: AccountListRequest
+    example:
+      token: b748f6e9afad6f3af3177cee9fc5366ca51d44da4f46e0bfdefee95c48a6e275193ffc3096dfdefd5dbe76a4e257bbbc35fe312a10f1b63a83cfeca349a7f403
+      customerId: 83d4af3e-50bf-440f-9ea7-c1d0c720f49e
+      customerName: PPMB_CBAIZE_584312
+    type: object
+    properties:
+      token:
+        type: string
+      customerId:
+        type: string
+      customerName:
+        type: string
+    required:
+    - token
+    - customerId
+    - customerName
+  AccountList:
+    title: AccountList
+    example:
+      ResponseCode: 00
+      ResponseText: Success
+      accounts:
+      - accountid: 241935
+        Description: EMPLOYEE CHECKING
+        AccountTypeId: 2
+      - accountid: 967281
+        Description: CNB SAVINGS
+        AccountTypeId: 4
+      - accountid: 8205999
+        Description: CNB SAVINGS
+        AccountTypeId: 4
+      - accountid: 8513590
+        Description: CNB SAVINGS
+        AccountTypeId: 4
+      - accountid: 8603615
+        Description: CNB SAVINGS
+        AccountTypeId: 4
+      - accountid: 8651317
+        Description: CNB SAVINGS
+        AccountTypeId: 4
+      - accountid: 10279315
+        Description: MPOWERED CHECKING
+        AccountTypeId: 2
+      ExecutionTimeStamp: 2019-09-05T12:19:33.961
+    type: object
+    properties:
+      ResponseCode:
+        type: string
+      ResponseText:
+        type: string
+      accounts:
+        type: array
+        items:
+          $ref: '#/definitions/Account'
+      ExecutionTimeStamp:
+        type: string
+    required:
+    - ResponseCode
+    - ResponseText
+    - accounts
+    - ExecutionTimeStamp
+  Account:
+    title: Account
+    example:
+      accountid: 241935
+      Description: EMPLOYEE CHECKING
+      AccountTypeId: 2
+    type: object
+    properties:
+      accountid:
+        type: string
+      Description:
+        type: string
+      AccountTypeId:
+        type: integer
+        format: int32
+    required:
+    - accountid
+    - Description
+    - AccountTypeId
+security:
+- apikey: []
+tags:
+- name: Misc
+  description: ''
