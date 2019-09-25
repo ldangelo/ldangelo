@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   version: '1.0'
   title: MoadBus
-  description: 'TODO: Add Description'
+  description: API's required for Allied MoadBus real-time integration.
   contact: {}
 host: core1.moadbusglobal.com
 basePath: /pp
