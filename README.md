@@ -32,6 +32,16 @@
 
 </div>
 
+## 🚀 Featured Project
+
+<div align="center">
+
+[![Ensemble](https://github-readme-stats.vercel.app/api/pin/?username=FortiumPartners&repo=ensemble&theme=github_dark&hide_border=true&bg_color=0d1117&icon_color=58a6ff)](https://github.com/FortiumPartners/ensemble)
+
+*Modular plugin ecosystem for Claude Code — 25 packages, 28 specialized AI agents, powering AI-augmented development workflows.*
+
+</div>
+
 ## 📈 Activity
 
 <div align="center">
