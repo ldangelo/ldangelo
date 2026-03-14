@@ -32,14 +32,6 @@
 
 </div>
 
-## 🏆 Trophies
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=ldangelo&theme=darkhub&no-frame=true&column=7&margin-w=10" alt="Trophies" />
-
-</div>
-
 ## 📈 Activity
 
 <div align="center">
