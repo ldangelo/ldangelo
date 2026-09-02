@@ -25,7 +25,6 @@
 <div align="center">
 
 [![Profile Views](https://komarev.com/ghpvc/?username=ldangelo&style=for-the-badge&label=Views&color=58a6ff)](https://github.com/ldangelo)
-[![Repos](https://img.shields.io/github/repo-count/ldangelo?label=Repos&style=for-the-badge&color=58a6ff)](https://github.com/ldangelo?tab=repositories)
 [![Followers](https://img.shields.io/github/followers/ldangelo?style=for-the-badge&color=58a6ff)](https://github.com/ldangelo?tab=followers)
 [![Stars](https://img.shields.io/github/stars/ldangelo?style=for-the-badge&color=yellow)](https://github.com/ldangelo?tab=stars)
 
@@ -34,4 +33,3 @@
 ## 🚀 Featured Project
 
 **[Ensemble](https://github.com/FortiumPartners/ensemble)** — Modular plugin ecosystem for Claude Code — 25 packages, 28 specialized AI agents, powering AI-augmented development workflows.
-
