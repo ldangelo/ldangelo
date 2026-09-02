@@ -2,8 +2,9 @@
 
 # Hi, I'm Leo D'Angelo 👋
 
-### CTO at Fortium Partners
+### CTO at SunStone Partners
 
+*An experienced AI practitioner helping our portfolio companies extract more value faster using AI.*
 *Building tools and platforms that help teams ship better software.*
 
 ---
