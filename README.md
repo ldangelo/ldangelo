@@ -24,28 +24,14 @@
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=ldangelo&show_icons=true&theme=github_dark&hide_border=true&count_private=true&bg_color=0d1117" alt="GitHub Stats" height="180" />
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=ldangelo&theme=github-dark-blue&hide_border=true&background=0d1117" alt="GitHub Streak" height="180" />
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ldangelo&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&langs_count=8" alt="Top Languages" height="180" />
+[![Profile Views](https://komarev.com/ghpvc/?username=ldangelo&style=for-the-badge&label=Views&color=58a6ff)](https://github.com/ldangelo)
+[![Repos](https://img.shields.io/github/repo-count/ldangelo?label=Repos&style=for-the-badge&color=58a6ff)](https://github.com/ldangelo?tab=repositories)
+[![Followers](https://img.shields.io/github/followers/ldangelo?style=for-the-badge&color=58a6ff)](https://github.com/ldangelo?tab=followers)
+[![Stars](https://img.shields.io/github/stars/ldangelo?style=for-the-badge&color=yellow)](https://github.com/ldangelo?tab=stars)
 
 </div>
 
 ## 🚀 Featured Project
 
-<div align="center">
+**[Ensemble](https://github.com/FortiumPartners/ensemble)** — Modular plugin ecosystem for Claude Code — 25 packages, 28 specialized AI agents, powering AI-augmented development workflows.
 
-[![Ensemble](https://github-readme-stats.vercel.app/api/pin/?username=FortiumPartners&repo=ensemble&theme=github_dark&hide_border=true&bg_color=0d1117&icon_color=58a6ff)](https://github.com/FortiumPartners/ensemble)
-
-*Modular plugin ecosystem for Claude Code — 25 packages, 28 specialized AI agents, powering AI-augmented development workflows.*
-
-</div>
-
-## 📈 Activity
-
-<div align="center">
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=ldangelo&theme=github-compact&hide_border=true&bg_color=0d1117&color=58a6ff&line=58a6ff&point=ffffff" alt="Activity Graph" />
-
-</div>
